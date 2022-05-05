@@ -1,6 +1,28 @@
-*{
-    margin:0;
+:root {
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --gray-dark: #333;
+    --gray-ligth: #ccc;
+    --white: #fff;
+    --yellow: #efd81d;
+    --yellow-30: #efd81d30;
+
+    --header-color: #45443B;
+}
+
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p {
+    /* font-weight: lighter; */
+    font-size: var(--md);
 }
