@@ -22,7 +22,35 @@ html {
     font-size: 62.5%;
 }
 
-p {
-    /* font-weight: lighter; */
-    font-size: var(--md);
+.section-animation {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.animation__text {
+    width: 0;
+    border-right: .15em solid var(--yellow);
+    font-size: 2rem;
+    font-family: "Courier New";
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
