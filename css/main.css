@@ -22,6 +22,46 @@ html {
     font-size: 62.5%;
 }
 
+h2 {
+    padding: 8px;
+    padding-left: 0;
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: var(--gray-dark);
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 3.6rem;
+}
+
+
+ul {
+    padding-left: 32px;
+    font-size: 1.6rem;
+    line-height: 3.6rem;
+}
+
+/* pre {
+    background-color: #c4c4c45A;
+    border: 1px solid #C4C4C4;
+    border-radius: 7px;
+    font-weight: 400;
+} */
+
+code {
+    /* white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left; */
+    font-size: 1.6rem;
+    /* vertical-align: middle; */
+    line-height: 3.6rem;
+}
+
+.error {
+    color: rgb(255, 91, 91);
+}
+
 .section-animation {
     min-height: 100vh;
     display: grid;
@@ -53,4 +93,17 @@ html {
     100% {
         width: 100%;
     }
+}
+
+/* ============================================ */
+/* Documentos */
+
+.main-document {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-document {
+    padding: 16px;
 }

@@ -1,0 +1,161 @@
+<section class="section-document">
+    <h2>Introduction</h2>
+    <p>JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time)
+        con
+        funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para
+        páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat
+        JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con
+        soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional)</p>
+</section>
+
+<section class="section-document">
+    <h2>Isomorfismo</h2>
+    <p>Hoy JavaScript, es el único lenguaje capaz de ejecutarse en las 3 capas de una aplicación: </p>
+    <ul>
+        <li>Frontend (con JavaScript). </li>
+        <li>Backend (con Node.js). </li>
+        <li>Persistencia de Datos (con MongoDB, Couch DB, Firebase, etc). </li>
+        <li>Frontend (con JavaScript). </li>
+    </ul>
+    <p>Con JavaScript puedes: </p>
+    <ul>
+        <li>Diseño y Desarrollo Web. </li>
+        <li>Hacer Videojuegos. </li>
+        <li>Experiencias 3D, Realidad Aumentada, Realidad Virtual. </li>
+        <li>Controlar Hardware (drones, robots, electrodomésticos, wearables, etc). </li>
+        <li>Aplicaciones Híbridas y Móviles. </li>
+        <li>Aprendizaje Automático. </li>
+        <li>Etc. </li>
+    </ul>
+</section>
+
+<section class="section-document">
+    <h2>JavaScript No es JAVA</h2>
+    <ul>
+        <li>JavaScript tiene un tipado débil, mientras que Java presenta un tipado fuerte.</li>
+        <li>Java es un lenguaje que compilado mientras que JavaScript es un lenguaje interpretado. </li>
+        <li>Java es un lenguaje orientado a objetos y JavaScript un lenguaje funcional. </li>
+    </ul>
+</section>
+
+<section class="section-document">
+    <h2>Escritura de código</h2>
+
+    <p>Los <b>identificadores</b> deben comenzar con:</p>
+
+    <ul>
+        <li>Una letra o </li>
+        <li>Un signo de dolar $ o </li>
+        <li>Un guión bajo _ </li>
+        <li>Nunca con números o caracteres especiales. </li>
+    </ul>
+
+    <p>Usa <b>snake_case</b> en: </p>
+
+    <ul>
+        <li>Nombre de archivos:</li>
+    </ul>
+
+    <pre>
+        <code>
+        mi_archivo_javascript.js;
+        </code>
+    </pre>
+
+    <p>Usa <b>UPPER_CASE</b> en: </p>
+    <ul>
+        <li>Constantes:</li>
+    </ul>
+
+    <pre>
+        <code>
+        const UNA_CONSTANTE = "Soy una constante"
+        PI = 3.141592653589793;
+        </code>
+    </pre>
+
+    <p>Usa <b>UpperCamelCase</b> en: </p>
+    <ul>
+        <li>Clases:</li>
+    </ul>
+    <pre>
+        <code>
+        class SerHumano {
+            constructor(nombre, genero) {
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+
+            miNombreEs() {
+                return `Mi nombre es ${this.nombre}`;
+            }
+        }
+        </code>
+    </pre>
+
+    <p>Usa <b>lowerCamelCase</b> en: </p>
+    <ul>
+        <li>Objetos:</li>
+    </ul>
+    <pre>
+        <code>
+        const unObjeto = {
+            nombre: "Jonathan",
+            email: "jonmircha@gmail.com",
+        };
+        </code>
+    </pre>
+    <ul>
+        <li>Primitivos</li>
+    </ul>
+    <pre>
+        <code>
+        let unaCadena = "Hola Mundo",
+        unNumero = 19,
+        unBoolean = true;
+        </code>
+    </pre>
+    <ul>
+        <li>Funciones</li>
+    </ul>
+    <pre>
+        <code>
+        function holaMundo(nombre) {
+            alert(`Hola mundo ${nombre}`);
+        }
+        holaMundo("Jonathan");
+        </code>
+    </pre>
+    <ul>
+        <li>Instancias</li>
+    </ul>
+    <pre><code>
+        const ajax = new XMLHttpRequest(),
+        jon = new SerHumano("Jonathan", "Hombre");
+    </code></pre>
+
+</section>
+
+<section class="section-document">
+    <h2>Palabras reservadas</h2>
+    <pre>
+        <code class="JavaScript">
+        A: abstract;
+        B: boolean, break, byte;
+        C: case, catch, char, class, const, continue;
+        D: debugger, default, delete, do, double;
+        E: else, enum, export, extends;
+        F: false, final, finally, float, for, function;
+        G: goto;
+        I: if, implements, import, in, instanceof, int, interface;
+        L: let, long;
+        N: native, new, null;
+        P: package, private, protected, public;
+        R: return;
+        S: short, static, super, switch, synchronized;
+        T: this, throw, throws, transient, true, try, typeof;
+        V: var, volatile, void;
+        W: while, with;
+        </code>
+    </pre>
+</section>
