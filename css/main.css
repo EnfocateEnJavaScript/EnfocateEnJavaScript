@@ -20,6 +20,7 @@
 
 html {
     font-size: 62.5%;
+    /* scroll-behavior: smooth; */
 }
 
 h2 {
@@ -35,6 +36,9 @@ p {
     line-height: 3.6rem;
 }
 
+a {
+    text-decoration: none;
+}
 
 ul {
     padding-left: 32px;
@@ -42,19 +46,8 @@ ul {
     line-height: 3.6rem;
 }
 
-/* pre {
-    background-color: #c4c4c45A;
-    border: 1px solid #C4C4C4;
-    border-radius: 7px;
-    font-weight: 400;
-} */
-
 code {
-    /* white-space: pre-wrap;
-    word-wrap: break-word;
-    text-align: left; */
     font-size: 1.6rem;
-    /* vertical-align: middle; */
     line-height: 3.6rem;
 }
 
@@ -62,6 +55,21 @@ code {
     color: rgb(255, 91, 91);
 }
 
+.btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(1.05);
+}
+
+/* ========================================================= */
+/* Animation for firs deploy */
+/* ========================================================= */
 .section-animation {
     min-height: 100vh;
     display: grid;
@@ -95,15 +103,283 @@ code {
     }
 }
 
-/* ============================================ */
-/* Documentos */
+/* ========================================================= */
+/* Nav */
+/* ========================================================= */
+.nav__container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 48px;
+    background-color: var(--gray-dark);
+    z-index: 99;
+}
 
-.main-document {
+.nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__btn {
+    padding-right: 16px;
+    background-color: transparent;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: var(--white);
+}
+
+@media (max-width:400px) {
+    .nav__btn {
+        font-size: 1.4rem;
+    }
+
+    .nav__btn:last-child {
+        padding-right: 0;
+    }
+}
+
+/* ========================================================= */
+/* header */
+/* ========================================================= */
+.header {
+    padding: 64px 0;
+    background-color: #45443B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: var(--white);
+}
+
+.subtitle {
+    width: 315px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.header__btn {
+    margin: 0 8px;
+    padding: 8px 16px;
+}
+
+.header__btn:first-child {
+    border: 1px solid #EFD81D;
+    background-color: #EFD81D;
+}
+
+.header__btn:last-child {
+    border: 1px solid #EFD81D;
+    color: #EFD81D;
+}
+
+@media (min-width:768px) {
+    .title {
+        font-size: 3.6rem;
+        line-height: 4.2rem;
+    }
+
+    .subtitle {
+        width: 500px;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        margin-bottom: 32px;
+    }
+
+    .header__btn {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========================================================= */
+/* Main Home */
+/* ========================================================= */
+.main-home {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.section-home {
+    padding: 16px;
+}
+
+.title-home {
+    font-weight: lighter;
+}
+
+.home-aside {
+    background-color: #EFD81D4C;
+    padding: 16px;
+}
+
+.btn-aside {
+    width: 100px;
+    position: relative;
+    left: calc(100% - 116px);
+    background-color: #444444;
+    color: var(--white);
+    padding: 8px 16px;
+}
+
+@media (min-width:768px) {
+    .main-home {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .home-aside {
+        grid-column: 1/4;
+    }
+
+    .btn-aside {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========================================================= */
+/* Footer */
+/* ========================================================= */
+.footer__container {
+    background-color: var(--gray-dark);
+}
+
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    color: var(--white);
+}
+
+.footer__title {
+    padding-top: 16px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--gray-ligth);
+}
+
+.footer__list {
+    padding: 0;
+}
+
+.footer__list li {
+    list-style: none;
+}
+
+@media (min-width:768px) {
+    .footer__container {
+        position: relative;
+        z-index: 99;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ========================================================= */
+/* Navbar */
+/* ========================================================= */
+.navbar {
+    height: calc(100% - 48px);
+    width: 100%;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--white);
+    overflow-y: auto;
+}
+
+.navbar ul {
+    padding-left: 0px;
+}
+
+.navbar li {
+    list-style: none;
+    padding-left: 16px;
+}
+
+.navbar ul li ul li {
+    font-weight: lighter;
+}
+
+.navbar__li-selected {
+    border-left: 3px solid var(--yellow);
+}
+
+.navbar__a {
+    color: var(--gray-dark);
+}
+
+/* ========================================================= */
+/* btn absolute */
+/* ========================================================= */
+.btn__absolute {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--gray-dark);
+    color: var(--yellow);
+    z-index: 999;
+}
+
+.btn__absolute:active {
+    transform: scale(1.1);
+}
+
+/* ========================================================= */
+/* Documentos */
+/* ========================================================= */
+.main-document {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+
 .section-document {
     padding: 16px;
+}
+
+@media (min-width:768px) {
+    .section-main {
+        width: calc(100% - 300px);
+        margin-left: 300px;
+        margin-top: 48px;
+    }
+
+    .navbar {
+        width: 300px;
+        padding-bottom: 400px;
+    }
+
+    .btn__absolute {
+        display: none;
+    }
+}
+
+.none {
+    display: none;
 }

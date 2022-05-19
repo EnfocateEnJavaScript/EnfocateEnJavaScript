@@ -24,13 +24,57 @@
 
 <body>
 
-    <section class="section-animation">
-        <div class="animation">
-            <p class="animation__text">En constructión!</p>
-        </div>
-    </section>
+    <data-replace url="./views/components/nav.html"></data-replace>
 
-    <script src="./app/index.js"></script>
+    <header class="header">
+        <h1 class="title">JavaScript</h1>
+        <p class="subtitle">JavaScript is the world's most popular programming language. </p>
+        <div>
+            <button class="btn header__btn">Documentación</button>
+            <button class="btn header__btn">Code</button>
+        </div>
+    </header>
+
+    <main class="main-home">
+        <section class="section-home">
+            <h2 class="title-home">Isomorfismo</h2>
+            <p>Hoy JavaScript, es el único lenguaje capaz de ejecutarse en las 3 capas de una aplicación: </p>
+            <ul>
+                <ol>Frontend(con JavaScript)</ol>
+                <ol>Backend(con Node.js)</ol>
+                <ol>Persistencia de Datos(con MongoDB, Couch DB, Firebase, etc)</ol>
+            </ul>
+        </section>
+
+        <section class="section-home">
+            <h2 class="title-home">JavaScritp no es Java</h2>
+            <ul>
+                <li>JavaScript tiene un tipado débil, mientras que Java presenta un tipado fuerte.</li>
+                <li>Java es un lenguaje que compilado mientras que JavaScript es un lenguaje interpretado </li>
+                <li>Java es un lenguaje orientado a objetos y JavaScript un lenguaje funcional.</li>
+            </ul>
+        </section>
+
+        <section class="section-home">
+            <h2 class="title-home">Funcional y prototípico </h2>
+            <p>JavaScript cuenta con un paradigma funcional que es un sub-paradigma declarativo, el cual conduce a menos
+                codigo, ya que tiene muchas funciones integradas que normalmente necesitas.</p>
+        </section>
+
+        <aside class="home-aside">
+            <p>JavaScript es el lenguaje de programación mas popular a nivel mundial. </p>
+
+            <p> JavaScript es el lenguaje de programación de la Web.</p>
+
+            <p>JavaScript es facil de aprender.</p>
+
+            <button class="btn btn-aside">Iniciar</button>
+        </aside>
+    </main>
+
+    <data-replace url="./views/components/footer.html"></data-replace>
+
+    <script src="./app/index.js" type="module"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-export default function dataReplace(element, url) {
+export default function dataReplace(element, url, cb) {
 
     const xhr = new XMLHttpRequest();
 
@@ -8,6 +8,7 @@ export default function dataReplace(element, url) {
         if (xhr.status >= 200 && xhr.status < 300) {
             element.outerHTML = xhr.responseText
             reloadStyles();
+            cb()
         } else {
             console.log("Error.responseText")
         }
