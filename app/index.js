@@ -11,15 +11,17 @@ import menu, {
 
 document.addEventListener("DOMContentLoaded", e => {
 
-    loadMenu('./app/helpers/data.json');
-
-    menu()
-
     const replaces = document.querySelectorAll("data-replace")
 
     replaces.forEach(el => dataReplace(el, el.getAttribute("url"), () => {
         scroll()
     }))
+
+    if (window.location.pathname === '/') return;
+
+    loadMenu('./app/helpers/data.json');
+
+    menu()
 
 })
 

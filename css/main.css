@@ -383,3 +383,7 @@ code {
 .none {
     display: none;
 }
+
+.dark-gray {
+    color: var(--gray-dark);
+}
