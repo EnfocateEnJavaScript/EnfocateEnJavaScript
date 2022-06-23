@@ -7,7 +7,7 @@ export default function dataReplace(element, url, cb) {
 
         if (xhr.status >= 200 && xhr.status < 300) {
             element.outerHTML = xhr.responseText
-            reloadStyles();
+            reloadStylesCode();
             cb()
         } else {
             console.log("Error.responseText")
@@ -22,7 +22,7 @@ export default function dataReplace(element, url, cb) {
 
 }
 
-function reloadStyles() {
+export function reloadStylesCode() {
     document.querySelectorAll('pre code').forEach((el) => {
         hljs.highlightBlock(el)
     });

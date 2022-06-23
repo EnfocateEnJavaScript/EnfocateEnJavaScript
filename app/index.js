@@ -1,5 +1,7 @@
 "use strict"
-import dataReplace from './helpers/DataReplace.js';
+import dataReplace, {
+    reloadStylesCode
+} from './helpers/DataReplace.js';
 import menu, {
     switchIcon,
     resizeMenu,
@@ -11,11 +13,11 @@ import menu, {
 
 document.addEventListener("DOMContentLoaded", e => {
 
-    const replaces = document.querySelectorAll("data-replace")
+    // const replaces = document.querySelectorAll("data-replace")
 
-    replaces.forEach(el => dataReplace(el, el.getAttribute("url"), () => {
-        scroll()
-    }))
+    // replaces.forEach(el => dataReplace(el, el.getAttribute("url"), () => {
+
+    // }))
 
     if (window.location.pathname === '/') return;
 
@@ -23,6 +25,9 @@ document.addEventListener("DOMContentLoaded", e => {
 
     menu()
 
+    scroll()
+
+    reloadStylesCode()
 })
 
 function clickListener(e) {

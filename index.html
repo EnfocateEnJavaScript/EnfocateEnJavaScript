@@ -24,7 +24,9 @@
 
 <body>
 
-    <data-replace url="./views/components/nav.html"></data-replace>
+    <sergey-import src="components/nav" />
+
+    <!-- <data-replace url="./views/components/nav.html"></data-replace> -->
 
     <header class="header">
         <h1 class="title">JavaScript</h1>
@@ -57,7 +59,8 @@
 
         <section class="section-home">
             <h2 class="title-home">Funcional y prototípico </h2>
-            <p>JavaScript cuenta con un paradigma funcional que es un sub-paradigma declarativo, el cual conduce a menos
+            <p>JavaScript cuenta con un paradigma funcional que es un sub-paradigma declarativo, el cual conduce a
+                menos
                 codigo, ya que tiene muchas funciones integradas que normalmente necesitas.</p>
         </section>
 
@@ -72,7 +75,8 @@
         </aside>
     </main>
 
-    <data-replace url="./views/components/footer.html"></data-replace>
+    <sergey-import src="components/footer" />
+    <!-- <data-replace url="./views/components/footer.html"></data-replace> -->
 
     <script src="./app/index.js" type="module"></script>
 </body>

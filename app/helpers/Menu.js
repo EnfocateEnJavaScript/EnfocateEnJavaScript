@@ -30,11 +30,12 @@ export function loadMenu(url) {
         const $ulLi = document.createElement('ul')
 
         // Obtenemos el contenido de la pagina
-        let itemUrl = item.url;
-        const $container = document.createElement('div')
-        $container.innerHTML = getAsync(itemUrl);
+        // let itemUrl = item.url;
+        // const $container = document.createElement('div')
+        // $container.innerHTML = document.getElementById('')
+        // getAsync(itemUrl);
 
-        let $h2 = $container.querySelectorAll('h2')
+        let $h2 = document.querySelectorAll('h2')
         $h2.forEach(itemH2 => {
             let $id = itemH2.getAttribute('id')
             let $title = itemH2.textContent
@@ -108,6 +109,7 @@ export function isSelect(e) {
     if (e.target.matches(".navbar__a")) {
 
         const navbarA = document.querySelector('.navbar__li-selected');
+        // if (navbarA)
         navbarA.classList.remove('navbar__li-selected')
 
         e.target.parentNode.classList.add('navbar__li-selected')
