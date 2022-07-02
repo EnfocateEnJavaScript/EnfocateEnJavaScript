@@ -2,37 +2,23 @@
 import dataReplace, {
     reloadStylesCode
 } from './helpers/DataReplace.js';
-import menu, {
-    switchIcon,
+import {
+    loadMenu,
+    clickMenu,
     resizeMenu,
-    changeUrl,
-    isSelect,
-    toggleMenu,
-    scrollLoad,
-    scroll,
-    loadMenu
 } from './helpers/Menu.js';
 
 document.addEventListener("DOMContentLoaded", e => {
 
     if (window.location.pathname === '/') return;
 
-    menu()
-
-    // scroll()
-
-    scrollLoad()
-
+    loadMenu()
 
     reloadStylesCode()
-
 })
 
 function clickListener(e) {
-    switchIcon(e)
-    changeUrl(e)
-    isSelect(e)
-    toggleMenu(e)
+    clickMenu(e)
 }
 
 document.addEventListener('click', clickListener)

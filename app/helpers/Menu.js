@@ -1,54 +1,19 @@
-import {
-    getAsync
-} from './XML.js';
+'use strict'
 
-export default function menu() {
+export function loadMenu() {
     resizeMenu()
+
+    loadMenuSelect()
 }
 
-export function loadMenu(url) {
+export function clickMenu(e) {
+    switchIcon(e)
 
-    let data = getAsync(url);
+    changeUrl(e)
 
-    let json = JSON.parse(data)
+    isSelect(e)
 
-    const $navbar = document.createElement('div')
-    $navbar.classList.add("navbar")
-    $navbar.classList.add("none")
-    $navbar.setAttribute('id', "navbar")
-
-    json.contenido.forEach(item => {
-
-        const $ul = document.createElement('ul')
-
-        const $li = document.createElement('li')
-        $li.textContent = item.title;
-
-        $ul.appendChild($li)
-
-        const $liUl = document.createElement('li')
-        const $ulLi = document.createElement('ul')
-
-        // Obtenemos el contenido de la pagina
-        // let itemUrl = item.url;
-        // const $container = document.createElement('div')
-        // $container.innerHTML = document.getElementById('')
-        // getAsync(itemUrl);
-
-        let $h2 = document.querySelectorAll('h2')
-        $h2.forEach(itemH2 => {
-            let $id = itemH2.getAttribute('id')
-            let $title = itemH2.textContent
-            $ulLi.innerHTML += `<li><a class="navbar__a" href="#${$id}">${$title}</a></li>`
-        })
-
-        $liUl.appendChild($ulLi)
-        $ul.appendChild($liUl)
-        $navbar.appendChild($ul)
-    })
-    // console.log($navbar.innerHTML)
-    document.getElementById('navbar').innerHTML = $navbar.innerHTML
-
+    toggleMenu(e)
 }
 
 export function switchIcon(e) {
@@ -133,35 +98,7 @@ export function isSelect(e) {
     }
 }
 
-export function scroll() {
-
-    // agregar sectiones dinamicas
-
-
-    const $sections = document.querySelectorAll("h2");
-
-    const cb = entries => {
-        entries.forEach(entry => {
-
-            // const id = entry.target.querySelector('h2').getAttribute('id');
-            const id = entry.target.getAttribute('id');
-
-            if (entry.isIntersecting)
-                document.querySelector(`.navbar>ul>li:last-child a[href="#${id}"]`).parentNode.classList.add('navbar__li-selected')
-            else
-                document.querySelector(`.navbar>ul>li:last-child a[href="#${id}"]`).parentNode.classList.remove('navbar__li-selected')
-        })
-    }
-
-    const observer = new IntersectionObserver(cb, {
-        rootMargin: "0px",
-        threshold: [.3, .5]
-    })
-
-    $sections.forEach(el => observer.observe(el))
-}
-
-export function scrollLoad() {
+export function loadMenuSelect() {
     // doing scroll when change a middle of other page
     let href = localStorage.getItem('href');
 
@@ -212,40 +149,3 @@ function scrollSmooth(idItem) {
         behavior: 'smooth'
     });
 }
-// ,
-//         {
-//             "title": "Tipos de datos en JavaScript",
-//             "url": "./"
-//         },
-//         {
-//             "title": "Estructuras de control",
-//             "url": "./"
-//         },
-//         {
-//             "title": "POO",
-//             "url": "./"
-//         },
-//         {
-//             "title": "Objetos y funciones del lenguaje",
-//             "url": "./"
-//         },
-//         {
-//             "title": "Programacion asincrona",
-//             "url": "./"
-//         },
-//         {
-//             "title": "This en javascript",
-//             "url": "./"
-//         },
-//         {
-//             "title": "JSON",
-//             "url": "./"
-//         },
-//         {
-//             "title": "DOM",
-//             "url": "./"
-//         },
-//         {
-//             "title": "Ajax asincrono",
-//             "url": "./"
-//         }
