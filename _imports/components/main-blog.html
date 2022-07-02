@@ -1,13 +1,25 @@
+<!-- Nav -->
+<sergey-import src="components/nav" />
+
+<!-- Main document -->
 <main class="main-document">
 
     <sergey-import src="components/nav-themes" />
 
     <div class="section-main">
-        <sergey-import src="blog/<sergey-slot/>" as="markdown" />
+        <sergey-import src="blog/<sergey-slot/>.md" as="markdown" />
     </div>
 </main>
 
+<!-- Btn Statics -->
 <div class="statics">
     <button id="btn-navbar" class="btn btn__absolute"><i class="bi bi-list"></i></button>
     <!-- <button class="btn btn__absolute"><i class="bi bi-list"></i></button> -->
 </div>
+
+<!-- Footer -->
+<sergey-import src="components/footer" />
+
+<!-- Scripts -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="./app/index.js" type="module"></script>
