@@ -7,33 +7,32 @@ import menu, {
     resizeMenu,
     changeUrl,
     isSelect,
+    toggleMenu,
+    scrollLoad,
     scroll,
     loadMenu
 } from './helpers/Menu.js';
 
 document.addEventListener("DOMContentLoaded", e => {
 
-    // const replaces = document.querySelectorAll("data-replace")
-
-    // replaces.forEach(el => dataReplace(el, el.getAttribute("url"), () => {
-
-    // }))
-
     if (window.location.pathname === '/') return;
-
-    loadMenu('./app/helpers/data.json');
 
     menu()
 
-    scroll()
+    // scroll()
+
+    scrollLoad()
+
 
     reloadStylesCode()
+
 })
 
 function clickListener(e) {
     switchIcon(e)
     changeUrl(e)
     isSelect(e)
+    toggleMenu(e)
 }
 
 document.addEventListener('click', clickListener)

@@ -1,0 +1,13 @@
+<main class="main-document">
+
+    <sergey-import src="components/nav-themes" />
+
+    <div class="section-main">
+        <sergey-import src="blog/<sergey-slot/>" as="markdown" />
+    </div>
+</main>
+
+<div class="statics">
+    <button id="btn-navbar" class="btn btn__absolute"><i class="bi bi-list"></i></button>
+    <!-- <button class="btn btn__absolute"><i class="bi bi-list"></i></button> -->
+</div>
