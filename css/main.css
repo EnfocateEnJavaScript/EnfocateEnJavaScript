@@ -347,8 +347,38 @@ code {
     border-left: 3px solid var(--yellow);
 }
 
-.navbar__a {
+.navbar a {
     color: var(--gray-dark);
+}
+
+/* Icon of menu*/
+.navbar i {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.navbar i::before,
+.navbar i::after {
+    position: absolute;
+    top: 16px;
+    left: 7px;
+    content: "";
+    width: 12px;
+    height: 1px;
+    background-color: #333;
+    transform: rotate(45deg);
+}
+
+.navbar i::before {
+    transform: rotate(50deg);
+}
+
+.navbar i::after {
+    left: 14px;
+    transform: rotate(-50deg);
 }
 
 .navbar .navbar-toggle-hide li:last-child {

@@ -92,7 +92,7 @@ export function changeUrl(e) {
     }
 
     // When click in a link
-    if (e.target.matches(".navbar__a")) {
+    if (e.target.matches(".navbar>ul>li:last-child a")) {
 
         e.preventDefault();
 
@@ -123,7 +123,7 @@ export function changeUrl(e) {
 }
 
 export function isSelect(e) {
-    if (e.target.matches(".navbar__a")) {
+    if (e.target.matches(".navbar>ul>li:last-child a")) {
 
         const navbarA = document.querySelector('.navbar__li-selected');
         if (navbarA)
@@ -147,9 +147,9 @@ export function scroll() {
             const id = entry.target.getAttribute('id');
 
             if (entry.isIntersecting)
-                document.querySelector(`.navbar__a[href="#${id}"]`).parentNode.classList.add('navbar__li-selected')
+                document.querySelector(`.navbar>ul>li:last-child a[href="#${id}"]`).parentNode.classList.add('navbar__li-selected')
             else
-                document.querySelector(`.navbar__a[href="#${id}"]`).parentNode.classList.remove('navbar__li-selected')
+                document.querySelector(`.navbar>ul>li:last-child a[href="#${id}"]`).parentNode.classList.remove('navbar__li-selected')
         })
     }
 
@@ -171,7 +171,7 @@ export function scrollLoad() {
         scrollSmooth(href);
 
     // Open menu when change page
-    document.querySelectorAll(".navbar .dark-gray").forEach(el => {
+    document.querySelectorAll(".navbar>ul>li>a").forEach(el => {
 
         if (el.href.includes(window.location.pathname)) {
             el.classList.add('navbar__a-link')
@@ -185,7 +185,7 @@ export function scrollLoad() {
 }
 
 export function toggleMenu(e) {
-    if (e.target.matches('.navbar__toggle')) {
+    if (e.target.matches('#navbar i')) {
         const $navbar__liToggle = e.target.parentNode.parentNode
         $navbar__liToggle.classList.contains('navbar-toggle-hide') ?
             $navbar__liToggle.classList.remove('navbar-toggle-hide') :
