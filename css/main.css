@@ -56,6 +56,10 @@ code {
     line-height: 3.6rem;
 }
 
+.d-none {
+    display: none;
+}
+
 .error {
     color: rgb(255, 91, 91);
 }
