@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "Proyecto enfocado en la documentación de javascript.",
     "main": "index.js",
+    "homepage":"https://enfocateenjavascript.github.io/EnfocateEnJavaScript/",
     "scripts": {
+        "deploy": "gh-pages -d public",
         "dev": "sergey --watch",
         "start": "sergey"
     },
@@ -19,6 +21,7 @@
     },
     "homepage": "https://github.com/EnfocateEnJavaScript/EnfocateEnJavaScript#readme",
     "dependencies": {
+        "gh-pages": "^4.0.0",
         "sergey": "0.0.13"
     }
 }
