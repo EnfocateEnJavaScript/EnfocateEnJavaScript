@@ -1,5 +1,5 @@
 -   
-    [Introducción](/introduccion.html) <i></i>
+    [Introducción](./introduccion.html) <i></i>
 -   
     -   [Introducción](#introducci&oacute;n)
     -   [Isomorfismo](#isomorfismo)
@@ -9,7 +9,7 @@
 
 
 -   
-    [Tipos de datos](/tipos-datos.html) <i></i>
+    [Tipos de datos](./tipos-datos.html) <i></i>
 -
     -   [Tipos de datos](#tipos-de-datos)
     -   [Tipado dinámico](#tipado-din&aacute;mico)
@@ -17,7 +17,7 @@
 
 
 -   
-    [Estructuras de control](/estructuras-control.html) <i></i>
+    [Estructuras de control](./estructuras-control.html) <i></i>
 -
     -   [Estructuras de control](#estructuras-de-control)
     -   [Tipos de estructuras de control](#tipos-de-estructuras-de-control)
