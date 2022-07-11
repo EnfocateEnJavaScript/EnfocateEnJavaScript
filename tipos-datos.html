@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tipos de Datos - EnfocateEnJavaScript
+    </title>
+    <!-- icono -->
+    <link href="assets/logo.svg" rel="icon">
+
+    <!-- iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- styles to code -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/dracula.min.css">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+
+<body>
+
+    <!-- Nav -->
+<div class="nav__container">
+    <nav class="nav">
+        <div class="">
+            <a href="./"><img class="logo" src="assets/logotipo.svg" alt="Logotipo de la pagina."></a>
+        </div>
+        <div class="">
+            <a class="btn nav__btn" href="./introduccion.html">Documentación</a>
+            <!-- <button class="btn nav__btn">Code</button> -->
+        </div>
+    </nav>
+</div>
+
+
+<!-- Main document -->
+<main class="main-document">
+
+    <div id="navbar" class="navbar none">
+
+    <ul>
+<li><a href="./introduccion.html">Introducción</a> <i></i></li>
+<li><ul>
+<li><a href="#introducci&oacute;n">Introducción</a></li>
+<li><a href="#isomorfismo">Isomorfismo</a></li>
+<li><a href="#javascript-no-es-java">JavaScript No es JAVA</a></li>
+<li><a href="#escritura-de-c&oacute;digo">Escritura de código</a></li>
+<li><a href="#palabras-reservadas">Palabras reservadas</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="./tipos-datos.html">Tipos de datos</a> <i></i></li>
+<li><ul>
+<li><a href="#tipos-de-datos">Tipos de datos</a></li>
+<li><a href="#tipado-din&aacute;mico">Tipado dinámico</a></li>
+<li><a href="#estructuras-y-tipos-de-datos">Estructuras y tipos de datos</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="./estructuras-control.html">Estructuras de control</a> <i></i></li>
+<li><ul>
+<li><a href="#estructuras-de-control">Estructuras de control</a></li>
+<li><a href="#tipos-de-estructuras-de-control">Tipos de estructuras de control</a></li>
+<li><a href="#estructura-de-control-if-else">IF ELSE</a></li>
+<li><a href="#estructura-de-control-switch">SWITCH</a></li>
+<li><a href="#estructura-de-control-while">WHILE</a></li>
+<li><a href="#estructura-de-control-do-while">DO WHILE</a></li>
+<li><a href="#estructura-de-control-for">FOR</a></li>
+<li><a href="#estructura-de-control-de-errores-try-catch">TRY CATCH</a></li>
+</ul>
+</li>
+</ul>
+
+    <!-- Estructura de ejemplo para la lista -->
+    <!-- <ul>
+        <li><a href="/documentos.html">Introducción</a><i></i></li>
+        <li>
+            <ul>
+                <li class="navbar__li-selected"><a class="navbar__a" href="#introducción">Introducción</a></li>
+                <li><a class="navbar__a" href="#introducción">Introducción</a></li>
+                <li><a href="#isomorfismo">Isomorfismo</a></li>
+                <li><a href="#javascript-no-es-java">JavaScript No es JAVA </a></li>
+                <li><a href="#escritura-de-código">Escritura de código</a></li>
+                <li><a href="#palabras-reservadas">Palabras reservadas</a></li>
+            </ul>
+        </li>
+    </ul> -->
+
+</div>
+
+
+    <div class="section-main">
+        <h2 id="tipos-de-datos">Tipos de datos</h2>
+<p>Todos los lenguajes de programación tienen estructuras de datos integradas, pero estas a menudo difieren de un lenguaje a otro. Este artículo intenta enumerar las estructuras de datos integradas disponibles en JavaScript y las propiedades que tienen. Estas se pueden utilizar para construir otras estructuras de datos. Siempre que es posible, se hacen comparaciones con otros lenguajes.</p>
+<h2 id="tipado-dinámico">Tipado dinámico</h2>
+<p>JavaScript es un lenguaje débilmente tipado y dinámico. Las variables en JavaScript no están asociadas directamente con ningún tipo de valor en particular, y a cualquier variable se le puede asignar (y reasignar) valores de todos los tipos:</p>
+<pre><code class="language-js">let foo = 42; // foo ahora es un número
+foo = &quot;bar&quot;; // foo ahora es un string
+foo = true; // foo ahora es un booleano</code></pre>
+<h2 id="estructuras-y-tipos-de-datos">Estructuras y tipos de datos</h2>
+<p>El último estándar ECMAScript define nueve tipos:</p>
+<ul>
+<li><p>Seis <strong>tipos de datos</strong> primitivos, controlados por el operador typeof</p>
+<ul>
+<li>Undefined: <code>typeof instance === &quot;undefined&quot;</code></li>
+<li>Boolean: <code>typeof instance === &quot;boolean&quot;</code></li>
+<li>Number: <code>typeof instance === &quot;number&quot;</code></li>
+<li>String: <code>typeof instance === &quot;string&quot;</code></li>
+<li>BigInt: <code>typeof instance === &quot;bigint&quot;</code></li>
+<li>Symbol: <code>typeof instance === &quot;symbol&quot;</code></li>
+</ul>
+</li>
+<li><p>Null: <code>typeof instance === &quot;object&quot;</code>. Tipo primitivo especial que tiene un uso adicional para su valor: si el objeto no se hereda, se muestra null</p>
+</li>
+<li><p>Object: <code>typeof instance === &quot;object&quot;</code>. Tipo estructural especial que no es de datos pero para cualquier instancia de objeto construido que también se utiliza como estructuras de datos: new Object, new Array, new Map, new Set, new WeakMap, new WeakSet, new Date y casi todo lo hecho con la palabra clave new</p>
+</li>
+<li><p>Function: una estructura sin datos, aunque también responde al operador <code>typeof</code>: <code>typeof instance === &quot;function&quot;</code>. Esta simplemente es una forma abreviada para funciones, aunque cada constructor de funciones se deriva del constructor <code>Object</code>.</p>
+</li>
+</ul>
+    </div>
+</main>
+
+<!-- Btn Statics -->
+<div class="statics">
+    <button id="btn-navbar" class="btn btn__absolute"><i class="bi bi-list"></i></button>
+    <!-- <button class="btn btn__absolute"><i class="bi bi-list"></i></button> -->
+</div>
+
+<!-- Footer -->
+<div class="footer__container">
+    <footer class="footer">
+        <div class="">
+            <h3 class="footer__title">Documentación</h3>
+            <ul class="footer__list">
+                <li> Introducción</li>
+                <li> Tipo de Datos</li>
+                <li> Estructuras de Control</li>
+                <li> Programación Orientada a Objetos</li>
+                <li> Objetos y Funciones del Lenguaje</li>
+                <li> Programación Asíncrona</li>
+                <li> JSON</li>
+                <li> AJAX</li>
+                <li> REST</li>
+            </ul>
+        </div>
+        <div class="">
+            <h3 class="footer__title">Code</h3>
+            <ul class="footer__list">
+                <li> Introducción</li>
+                <li> Tipo de Datos</li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Scripts -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="./app/index.js" type="module"></script>
+
+
+</body>
+
+</html>

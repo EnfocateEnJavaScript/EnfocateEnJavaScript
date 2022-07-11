@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Estructuras de Control - EnfocateEnJavaScript
+    </title>
+    <!-- icono -->
+    <link href="assets/logo.svg" rel="icon">
+
+    <!-- iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- styles to code -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/dracula.min.css">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+
+<body>
+
+    <!-- Nav -->
+<div class="nav__container">
+    <nav class="nav">
+        <div class="">
+            <a href="./"><img class="logo" src="assets/logotipo.svg" alt="Logotipo de la pagina."></a>
+        </div>
+        <div class="">
+            <a class="btn nav__btn" href="./introduccion.html">Documentación</a>
+            <!-- <button class="btn nav__btn">Code</button> -->
+        </div>
+    </nav>
+</div>
+
+
+<!-- Main document -->
+<main class="main-document">
+
+    <div id="navbar" class="navbar none">
+
+    <ul>
+<li><a href="./introduccion.html">Introducción</a> <i></i></li>
+<li><ul>
+<li><a href="#introducci&oacute;n">Introducción</a></li>
+<li><a href="#isomorfismo">Isomorfismo</a></li>
+<li><a href="#javascript-no-es-java">JavaScript No es JAVA</a></li>
+<li><a href="#escritura-de-c&oacute;digo">Escritura de código</a></li>
+<li><a href="#palabras-reservadas">Palabras reservadas</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="./tipos-datos.html">Tipos de datos</a> <i></i></li>
+<li><ul>
+<li><a href="#tipos-de-datos">Tipos de datos</a></li>
+<li><a href="#tipado-din&aacute;mico">Tipado dinámico</a></li>
+<li><a href="#estructuras-y-tipos-de-datos">Estructuras y tipos de datos</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="./estructuras-control.html">Estructuras de control</a> <i></i></li>
+<li><ul>
+<li><a href="#estructuras-de-control">Estructuras de control</a></li>
+<li><a href="#tipos-de-estructuras-de-control">Tipos de estructuras de control</a></li>
+<li><a href="#estructura-de-control-if-else">IF ELSE</a></li>
+<li><a href="#estructura-de-control-switch">SWITCH</a></li>
+<li><a href="#estructura-de-control-while">WHILE</a></li>
+<li><a href="#estructura-de-control-do-while">DO WHILE</a></li>
+<li><a href="#estructura-de-control-for">FOR</a></li>
+<li><a href="#estructura-de-control-de-errores-try-catch">TRY CATCH</a></li>
+</ul>
+</li>
+</ul>
+
+    <!-- Estructura de ejemplo para la lista -->
+    <!-- <ul>
+        <li><a href="/documentos.html">Introducción</a><i></i></li>
+        <li>
+            <ul>
+                <li class="navbar__li-selected"><a class="navbar__a" href="#introducción">Introducción</a></li>
+                <li><a class="navbar__a" href="#introducción">Introducción</a></li>
+                <li><a href="#isomorfismo">Isomorfismo</a></li>
+                <li><a href="#javascript-no-es-java">JavaScript No es JAVA </a></li>
+                <li><a href="#escritura-de-código">Escritura de código</a></li>
+                <li><a href="#palabras-reservadas">Palabras reservadas</a></li>
+            </ul>
+        </li>
+    </ul> -->
+
+</div>
+
+
+    <div class="section-main">
+        <h2 id="estructuras-de-control">Estructuras de control</h2>
+<p>Las estructuras de control en javascript y en la mayoría de los lenguajes de programación se utilizan en los  para definir el flujo de instrucciones que se van ejecutando. Si no fuera por las estructuras de control lo único que podríamos hacer es ejecutar una instrucción tras otra y no tendriamos forma de aplicar unas funciones u otras en según las condiciones que nosotros queramos establecer.</p>
+<h2 id="tipos-de-estructuras-de-control">Tipos de estructuras de control</h2>
+<p>En javascript disponemos de 2 tipos de estructuras de control:</p>
+<ul>
+<li><p>Estructuras condicionales. Este tipo de estructura de control tiene como objetivo realizar una bifurcación del flujo de instrucciones. Cuando el programa llega a un punto, nosotros establecemos una condición en en función de la misma el programa seguirá ejecutando unas instrucciones u otras; tal y como hemos visto en el anterior ejemplo cuando veíamos un caso de control de acceso sencillo. </p>
+</li>
+<li><p>Estructuras de repetición. Este tipo de estructuras de control también conocidas como bucles se utilizan para realizar de forma repetida varias acciones.</p>
+</li>
+<li><p>Estructuras de control de errores. Estas estructuras son clave en el mundo de la seguridad informática. Son aquellas que permiten controlar los errores que el usuario final comete de forma fortuita o intencionada y poder seguir trabando de forma normal. Los errores más típicos a tener en cuenta se producen cuando pedimos al usuario que introduzca un número pero el usuario nos introduce una letra. Esto producirá un error en nuestro programá y hará que se comporte de forma inadecuada si no hemos controlado mediante una estructura de control de errores este caso.</p>
+</li>
+</ul>
+<h2 id="estructura-de-control-if-else">Estructura de control (IF ELSE)</h2>
+<p>Las estructuras condicionales en javascript nos sirven para tomar decisiones en función de una condición que nosotros establecemos. Su sintáxis es así:</p>
+<pre><code class="language-js">if (condicion)
+{
+    instrucciones que se ejecutarán si se cumple la condición
+}
+else
+{
+    instrucciones que se ejecutarán si NO se cumple la condición
+}</code></pre>
+<h2 id="estructura-de-control-switch">Estructura de control (SWITCH)</h2>
+<p>No en todos los casos nos es suficiente una estructura de control que nos permita realizar una acción si se cumple una condición u otra acción si no se cumple. A veces nos ocurrirá que debemos hacer unas acciones si una variables tiene un valor, otras si tiene un valor distinto y otras si tiene otro valor distinto al anterior. Es el caso típico de los menús de elección de opciones. En función de la opción elegida por el usuario nosotros debemos hacer lo que nos pide. Para estos casos entre otros  muchos se crearon las estructuras de control SWITCH; cuya sintáxis es así:</p>
+<pre><code class="language-js">switch (expresion){
+    case valor1: 
+        sentencia1;
+        break;
+    case valor2: 
+        sentencia2;
+        break;
+    case valorN: 
+        sentenciaN;
+        break;
+    default: 
+        sentenciaFinal;
+        break;
+}</code></pre>
+<h2 id="estructura-de-control-while">Estructura de control WHILE</h2>
+<p>Pasamos a ver la primera estructura de repetición en javascript; el bucle WHILE. La idea principal con la que se han creado estos bucles es: MIENTRAS se cumpla la condición REALIZAR estas acciones. Cuando la condición deje de cumplirse salimos del bucle y continúa el flujo del programa. Su sintáxis es:</p>
+<pre><code class="language-js">while (expresionBooleana) {
+    sentencia;
+}</code></pre>
+<h2 id="estructura-de-control-do-while">Estructura de control DO WHILE</h2>
+<p>Este bucle es exactamente igual que el anterior pero con la diferencia de que la condición se comprueba al final. Este tipo de bucles son muy utilizados cuando creamos un menú de opciones; mientras el usuario no elija la opción de salir del programa seguiremos trabajando con el. Por ello necesitamos comprobar la opción que el usuario a elegido al final del programa, ya que al principio aún no sabemos la opción que ha escogido. Vamos a ver un ejemplo de cómo podemos calcular el factorial de un número con el uso de este bucle:</p>
+<pre><code class="language-js">var resultado = 1;
+var numero = 5;
+
+do {
+  resultado = resultado * numero;
+  numero–;
+} while(numero &gt; 0);
+
+alert(resultado);</code></pre>
+<h2 id="estructura-de-control-for">Estructura de control FOR</h2>
+<p>En los bucles vistos hasta ahora nosotros no conociamos el número de iteraciones que se darían en el bucle, ya que continuar dentro del bucle o salir es algo que depende de una condición (elegir una opción de un menú, introducir una contraseña válida….). Pero a veces nosotros sabemos exactamente el número de iteraciones que queremos hacer; no dependen de una condición. Para estos casos existe el bucle «FOR» cuya sintáxis es así:</p>
+<pre><code class="language-js">for (inicio; test; incremento)
+{
+    sentencia;
+}</code></pre>
+<h2 id="estructura-de-control-de-errores-try-catch">Estructura de control de errores TRY CATCH</h2>
+<p>Estas sentencias se utilizan para ejecutar código de forma segura, ya que en el caso de que existan excepciones, podremos capturarlas y seguir ejecutando normalmente el código, Una excepción es un error que se produce por algún motivo determinado durante la ejecución de un script, ese error comúnmente es mostrado al usuario, en este caso será lanzado para «afuera», en donde la siguiente sentencia (match) lo capturará, impidiéndole salir de la manera nativa al usuario, permitiéndonos trabajar con el error o bien mostrar un mensaje más amigable y claro a los ojos del mismo. Veamos un ejemplo de uso de esta estructura de control:</p>
+<pre><code class="language-js">try
+{
+    document.write(10/variable1) ; //Variable insegura del usuario (puede introducir un 0)
+}catch(e)
+{
+    alert(e.message); // Mensaje en caso de error
+}</code></pre>
+    </div>
+</main>
+
+<!-- Btn Statics -->
+<div class="statics">
+    <button id="btn-navbar" class="btn btn__absolute"><i class="bi bi-list"></i></button>
+    <!-- <button class="btn btn__absolute"><i class="bi bi-list"></i></button> -->
+</div>
+
+<!-- Footer -->
+<div class="footer__container">
+    <footer class="footer">
+        <div class="">
+            <h3 class="footer__title">Documentación</h3>
+            <ul class="footer__list">
+                <li> Introducción</li>
+                <li> Tipo de Datos</li>
+                <li> Estructuras de Control</li>
+                <li> Programación Orientada a Objetos</li>
+                <li> Objetos y Funciones del Lenguaje</li>
+                <li> Programación Asíncrona</li>
+                <li> JSON</li>
+                <li> AJAX</li>
+                <li> REST</li>
+            </ul>
+        </div>
+        <div class="">
+            <h3 class="footer__title">Code</h3>
+            <ul class="footer__list">
+                <li> Introducción</li>
+                <li> Tipo de Datos</li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Scripts -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="./app/index.js" type="module"></script>
+
+
+</body>
+
+</html>
