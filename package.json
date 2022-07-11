@@ -19,7 +19,6 @@
     "bugs": {
         "url": "https://github.com/EnfocateEnJavaScript/EnfocateEnJavaScript/issues"
     },
-    "homepage": "https://github.com/EnfocateEnJavaScript/EnfocateEnJavaScript#readme",
     "dependencies": {
         "gh-pages": "^4.0.0",
         "sergey": "0.0.13"
