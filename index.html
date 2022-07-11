@@ -1,36 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnfocateEnJavaScript</title>
-    <!-- icono -->
-    <link href="assets/logo.svg" rel="icon">
-
-    <!-- iconos -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-
-    <!-- styles -->
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
+<sergey-import src="components/head" />
 
 <body>
 
-    <section class="section-animation">
-        <div class="animation">
-            <p class="animation__text">En construcción!</p>
-        </div>
-    </section>
+    <sergey-import src="components/nav" />
+    <!-- <data-replace url="./views/components/nav.html"></data-replace> -->
 
-    <script src="./app/index.js"></script>
+    <header class="header">
+        <h1 class="title">JavaScript</h1>
+        <p class="subtitle">JavaScript is the world's most popular programming language. </p>
+        <div>
+            <a class="btn header__btn dark-gray" href="./introduccion.html">Documentación</a>
+            <button class="btn header__btn opacity d-none">Code</button>
+        </div>
+    </header>
+
+    <main class="main-home">
+        <section class="section-home">
+            <h2 class="title-home">Isomorfismo</h2>
+            <p>Hoy JavaScript, es el único lenguaje capaz de ejecutarse en las 3 capas de una aplicación: </p>
+            <ul>
+                <ol>Frontend(con JavaScript)</ol>
+                <ol>Backend(con Node.js)</ol>
+                <ol>Persistencia de Datos(con MongoDB, Couch DB, Firebase, etc)</ol>
+            </ul>
+        </section>
+
+        <section class="section-home">
+            <h2 class="title-home">JavaScritp no es Java</h2>
+            <ul>
+                <li>JavaScript tiene un tipado débil, mientras que Java presenta un tipado fuerte.</li>
+                <li>Java es un lenguaje que compilado mientras que JavaScript es un lenguaje interpretado </li>
+                <li>Java es un lenguaje orientado a objetos y JavaScript un lenguaje funcional.</li>
+            </ul>
+        </section>
+
+        <section class="section-home">
+            <h2 class="title-home">Funcional y prototípico </h2>
+            <p>JavaScript cuenta con un paradigma funcional que es un sub-paradigma declarativo, el cual conduce a
+                menos
+                codigo, ya que tiene muchas funciones integradas que normalmente necesitas.</p>
+        </section>
+
+        <aside class="home-aside">
+            <p>JavaScript es el lenguaje de programación mas popular a nivel mundial. </p>
+
+            <p> JavaScript es el lenguaje de programación de la Web.</p>
+
+            <p>JavaScript es facil de aprender.</p>
+
+            <button class="btn btn-aside"><a href="/introduccion.html">Iniciar</a></button>
+        </aside>
+    </main>
+
+    <sergey-import src="components/footer" />
+
+    <script src="./app/index.js" type="module"></script>
 </body>
 
 </html>

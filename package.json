@@ -1,0 +1,27 @@
+{
+    "name": "EnfocateEnJavaScript",
+    "version": "1.0.0",
+    "description": "Proyecto enfocado en la documentación de javascript.",
+    "main": "index.js",
+    "homepage":"https://enfocateenjavascript.github.io/EnfocateEnJavaScript/",
+    "scripts": {
+        "deploy": "gh-pages -d public",
+        "dev": "sergey --watch",
+        "start": "sergey"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EnfocateEnJavaScript/EnfocateEnJavaScript.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/EnfocateEnJavaScript/EnfocateEnJavaScript/issues"
+    },
+    "homepage": "https://github.com/EnfocateEnJavaScript/EnfocateEnJavaScript#readme",
+    "dependencies": {
+        "gh-pages": "^4.0.0",
+        "sergey": "0.0.13"
+    }
+}
